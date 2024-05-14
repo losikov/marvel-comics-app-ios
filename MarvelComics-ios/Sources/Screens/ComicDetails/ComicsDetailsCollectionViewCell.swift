@@ -306,11 +306,11 @@ private extension UIButton {
                withConfiguration: UIImage.SymbolConfiguration(font: font, scale: .small)
            )
         {
-            func renderImage(with color: UIColor) -> UIImage {
+            func renderImage(with iconColor: UIColor) -> UIImage {
                 let imageSize = CGSize(width: 12 + icon.size.width + 9 + 12, height: 30)
                 let renderer = UIGraphicsImageRenderer(size: imageSize)
                 let image = renderer.image { context in
-                    icon.withTintColor(color).draw(
+                    icon.withTintColor(iconColor).draw(
                         at: .init(
                             x: 12,
                             y: (imageSize.height - icon.size.height) / 2.0
